@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>@yield('title')</title>
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
     <link rel="stylesheet" href="{{ asset('assets/vendor/bootstrap/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/vendor/pushy/pushy.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
@@ -20,9 +21,9 @@
     <div id="container">
         <button class="menu-btn">&#9776; {{ __('Menu') }}</button>
         <br>
-        
+
         @include('shared.alerts')
-    
+
         @yield('content')
     </div>
 
