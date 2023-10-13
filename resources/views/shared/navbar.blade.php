@@ -8,7 +8,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                    <a class="nav-link" onclick="return confirm('Are you sure you want to log out?')" href="{{ route('logout') }}">
+                    <a class="nav-link btn btn-danger text-light" onclick="return confirm('Are you sure you want to log out?')" href="{{ route('logout') }}">
                         <i class="fa-solid fa-right-from-bracket me-2"></i>
                         {{ __('Logout') }}
                     </a>
