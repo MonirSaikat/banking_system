@@ -8,7 +8,7 @@ use App\Http\Controllers\WithdrawlController;
 use Illuminate\Support\Facades\Route;
 
 
-Route::group(['middleware' => 'auth'], function () {
+Route::group(['middleware' => 'guest'], function () {
     Route::resource('login', AuthController::class)
         ->only(['index', 'store'])
         ->names([
