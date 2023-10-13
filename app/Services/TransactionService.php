@@ -107,7 +107,7 @@ class TransactionService
                 'fee' => $withdrawalFee
             ]);
 
-            event(new FundsDeposited($user, -$netWithdrawal));
+            event(new FundsDeposited($user, -$amount));
 
             $this->db::commit();
 
