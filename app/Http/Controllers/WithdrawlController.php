@@ -27,8 +27,9 @@ class WithdrawlController extends Controller
     public function store(Request $request)
     {
         try {
+            $user = auth()->user();
             $data = $this->validate($request, [
-                'amount' => 'required',
+                'amount' => 'required|lte:' . $user->balance,
                 'date' => 'required',
             ]);
 
