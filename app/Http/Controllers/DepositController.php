@@ -8,7 +8,7 @@ class DepositController extends Controller
 {
     public function index()
     {
-        return view('deposit.create');
+        return view('deposit.index');
     }
 
     public function create()
