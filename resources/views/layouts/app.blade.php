@@ -19,9 +19,7 @@
     @include('shared.sidebar')
 
     <div id="container">
-        <button class="menu-btn">&#9776; {{ __('Menu') }}</button>
-        <br>
-
+        @include('shared.navbar')
         @include('shared.alerts')
 
         @yield('content')

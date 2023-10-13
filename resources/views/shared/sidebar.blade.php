@@ -36,14 +36,6 @@
                     </li>
                 </ul>
             </li>
-            <li class="pushy-link">
-                <a 
-                    onclick="return confirm('Are you sure you want to log out?')"
-                    href="{{ route('logout') }}">
-                        <i class="fa-solid fa-right-from-bracket me-2"></i>
-                        {{ __('Logout') }}
-                </a>
-            </li>
         </ul>
     </div>
 </nav>

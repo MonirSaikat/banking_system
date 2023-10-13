@@ -65,15 +65,14 @@ nav ul {
 .menu-btn {
     width: 100px;
     padding: 10px;
-    margin-bottom: 30px;
-    background: #000;
+    background: var(--theme-color);
     color: #FFF;
     text-align: center;
     border: 0;
 }
 
 .menu-btn:hover {
-    background: var(--theme-color);
+    opacity: 0.8;
     color: #FFF;
 }
 
