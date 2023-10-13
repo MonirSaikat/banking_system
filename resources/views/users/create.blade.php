@@ -18,7 +18,7 @@
                         <option value="Business">{{ __('Business') }}</option>
                     </select>
                     @error('account_type')
-                        <div class="invalid-feedback">
+                        <div class="text-danger">
                             {{ $message }}
                         </div>
                     @enderror
@@ -28,7 +28,7 @@
                     <label class="form-label" for="name">{{ __('Name') }}</label>
                     <input type="name" id="name" class="form-control" name="name" value="{{ old('name') }}" />
                     @error('name')
-                        <div class="invalid-feedback">
+                        <div class="text-danger">
                             {{ $message }}
                         </div>
                     @enderror
@@ -38,7 +38,7 @@
                     <label class="form-label" for="email">{{ __('Email') }}</label>
                     <input type="email" id="email" class="form-control" name="email" value="{{ old('email') }}" />
                     @error('email')
-                        <div class="invalid-feedback">
+                        <div class="text-danger">
                             {{ $message }}
                         </div>
                     @enderror
@@ -48,7 +48,7 @@
                     <label class="form-label" for="password">{{ __('Password') }}</label>
                     <input type="password" id="password" class="form-control" name="password" />
                     @error('password')
-                        <div class="invalid-feedback">
+                        <div class="text-danger">
                             {{ $message }}
                         </div>
                     @enderror
@@ -58,7 +58,7 @@
                     <label class="form-label" for="password_confirmation">{{ __('Confirm Password') }}</label>
                     <input type="password" id="password_confirmation" class="form-control" name="password_confirmation" />
                     @error('password_confirmation')
-                        <div class="invalid-feedback">
+                        <div class="text-danger">
                             {{ $message }}
                         </div>
                     @enderror

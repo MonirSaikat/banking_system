@@ -17,7 +17,7 @@
                             <input type="date" step="any" id="date" class="form-control" name="date"
                                 value="{{ old('date') ?? date('Y-m-d') }}" />
                             @error('date')
-                                <div class="invalid-feedback">
+                                <div class="text-danger">
                                     {{ $message }}
                                 </div>
                             @enderror
@@ -28,7 +28,7 @@
                             <input type="number" step="any" id="amount" class="form-control" name="amount"
                                 value="{{ old('amount') }}" />
                             @error('amount')
-                                <div class="invalid-feedback">
+                                <div class="text-danger">
                                     {{ $message }}
                                 </div>
                             @enderror

@@ -139,3 +139,7 @@ footer p {
     transition: all ease-in-out 0.15s;
     position: relative;
 }
+
+.form-group .text-danger {
+    font-size: 14px;
+}
