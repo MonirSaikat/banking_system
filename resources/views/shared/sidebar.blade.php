@@ -18,10 +18,11 @@
                     </li>
                 </ul>
             </li>
+            <li class="pushy-link"><a onclick="return confirm('Are you sure you want to log out?')"
+                    href="{{ route('logout') }}">{{ __('Logout') }}</a></li>
         </ul>
     </div>
 </nav>
 
 <!-- Site Overlay -->
 <div class="site-overlay"></div>
-

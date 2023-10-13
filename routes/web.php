@@ -22,4 +22,5 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/', DashboardController::class)->name('dashboard');
     Route::resource('deposit', DepositController::class)->only(['index', 'create', 'store']);
     Route::resource('withdrawal', WithdrawlController::class)->only(['index', 'create', 'store']);
+    Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 });
