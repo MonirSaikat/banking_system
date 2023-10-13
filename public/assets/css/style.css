@@ -1,3 +1,7 @@
+:root {
+    --theme-color: #2470dc;
+}
+
 * {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -23,7 +27,7 @@ body {
 /* Links */
 
 a {
-    color: #00b4ff;
+    color: var(--theme-color);
     text-decoration: none;
 }
 
@@ -69,7 +73,7 @@ nav ul {
 }
 
 .menu-btn:hover {
-    background: #00b4ff;
+    background: var(--theme-color);
     color: #FFF;
 }
 
@@ -90,4 +94,49 @@ footer p {
 
 .pushy-content li {
     list-style-type: none;
+}
+
+/* custom styles */
+.card {
+    border-radius: 7px 7px 0 0;
+}
+
+.card-header {
+    background-color: var(--theme-color);
+    color: #fff;
+}
+
+.card-header h1,
+.card-header h2,
+.card-header h3,
+.card-header h4,
+.card-header h5,
+.card-header h6 {
+    margin: 0;
+}
+
+.card-header .btn-primary {
+    background-color: #ffffff !important;
+    color: black !important;
+}
+
+.form-control {
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+}
+
+.form-control:focus {
+    border-color: var(--theme-color);
+}
+
+.btn {
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    outline: 0 !important;
+    -webkit-transition: all ease-in-out 0.15s;
+    -o-transition: all ease-in-out 0.15s;
+    transition: all ease-in-out 0.15s;
+    position: relative;
 }
