@@ -22,8 +22,9 @@ class UserController extends Controller
             'password' => 'required|confirmed'
         ]);
 
-        User::create($data);
+        $user = User::create($data);
 
-        return redirect()->route('login')->with('success', __('You can login now.'));
+        auth()->login($user);
+        return redirect()->route('dashboard');
     }
 }
