@@ -2,6 +2,7 @@
 
 namespace App\Services;
 
+use App\Events\FundsDeposited;
 use App\Models\Transaction;
 use Exception;
 use Illuminate\Support\Facades\Auth;
@@ -28,6 +29,8 @@ class TransactionService
                 'user_id' => $this->auth::user()->id,
                 'transaction_type' => Transaction::DEPOSIT
             ]);
+
+            event(new FundsDeposited(auth()->user(), $amount));
 
             $this->db::commit();
 
