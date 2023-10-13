@@ -9,6 +9,9 @@ class Transaction extends Model
 {
     use HasFactory;
 
+    public const DEPOSIT = 'Deposit';
+    public const WITHDRAW = 'Withdraw';
+
     protected $guarded = ['id'];
 
     public function user()
