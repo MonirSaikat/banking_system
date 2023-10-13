@@ -93,9 +93,10 @@ class TransactionService
 
                 if ($totalWithdrawal + $amount > 50000) {
                     $withdrawalRate = 0.015;
-                    $withdrawalFee = $amount * $withdrawalRate;
-                    $netWithdrawal = $amount - $withdrawalFee;
                 }
+                
+                $withdrawalFee = $amount * $withdrawalRate;
+                $netWithdrawal = $amount - $withdrawalFee;
             }
 
             Transaction::create([
