@@ -4,7 +4,19 @@
 
 @section('content')
 
+    <div class="card mb-3">
+        <div class="card-body">
+            {{ __('Hello') }},
+            {{ auth()->user()->name }}
+            {{ __(' your current balance is ') }}
+            {{ auth()->user()->balance ?? 0 }}
+        </div>
+    </div>
+
     <div class="card">
+        <div class="card-header">
+            <h4 class="card-title">{{ __('Transaction List') }}</h4>
+        </div>
         <div class="card-body">
             <div class="table-responsive">
                 <table class="table">

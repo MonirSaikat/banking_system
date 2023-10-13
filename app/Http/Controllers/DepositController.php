@@ -17,7 +17,8 @@ class DepositController extends Controller
 
     public function index()
     {
-        return view('deposit.index');
+        $transactions = $this->transactionService->depositList();
+        return view('deposit.index', compact('transactions'));
     }
 
     public function create()

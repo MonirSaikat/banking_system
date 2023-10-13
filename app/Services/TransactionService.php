@@ -40,4 +40,11 @@ class TransactionService
             return false;
         }
     }
+
+    public function depositList()
+    {
+        return Transaction::where('user_id', $this->auth::user()->id)
+            ->where('transaction_type', Transaction::DEPOSIT)
+            ->paginate(10);
+    }
 }
