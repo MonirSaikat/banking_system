@@ -25,7 +25,3 @@
 <!-- Site Overlay -->
 <div class="site-overlay"></div>
 
-<!-- Your Content -->
-<div id="container">
-    <button class="menu-btn">&#9776; {{ __('Menu') }}</button>
-</div>
