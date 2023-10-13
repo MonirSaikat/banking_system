@@ -26,7 +26,7 @@ class TransactionService
                 'amount' => $amount,
                 'date' => $date,
                 'user_id' => $this->auth::user()->id,
-                'transaction_type' => 'Deposit'
+                'transaction_type' => Transaction::DEPOSIT
             ]);
 
             $this->db::commit();
