@@ -66,7 +66,7 @@
 
                 <button class="btn btn-primary my-3 d-block">{{ __('Register') }}</button>
 
-                <a href="{{ route('users.create') }}">{{ __('New account') }} ?</a>
+                <a href="{{ route('login') }}">{{ __('Already have an account') }} ?</a>
             </form>
         </div>
     </div>
