@@ -87,3 +87,7 @@ footer i {
 footer p {
     margin-bottom: 5px;
 }
+
+.pushy-content li {
+    list-style-type: none;
+}
