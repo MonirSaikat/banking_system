@@ -2,8 +2,8 @@
 
 namespace App\Providers;
 
-use App\Events\FundsDeposited;
-use App\Listeners\IncreaseUserBalance;
+use App\Events\TransactionCreated;
+use App\Listeners\UpdateUserBalance;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Auth\Listeners\SendEmailVerificationNotification;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
@@ -20,8 +20,8 @@ class EventServiceProvider extends ServiceProvider
         Registered::class => [
             SendEmailVerificationNotification::class,
         ],
-        FundsDeposited::class => [
-            IncreaseUserBalance::class
+        TransactionCreated::class => [
+            UpdateUserBalance::class
         ]
     ];
 

@@ -2,11 +2,11 @@
 
 namespace App\Listeners;
 
-use App\Events\FundsDeposited;
+use App\Events\TransactionCreated;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Queue\InteractsWithQueue;
 
-class IncreaseUserBalance
+class UpdateUserBalance
 {
     /**
      * Create the event listener.
@@ -19,7 +19,7 @@ class IncreaseUserBalance
     /**
      * Handle the event.
      */
-    public function handle(FundsDeposited $event): void
+    public function handle(TransactionCreated $event): void
     {
         $user = $event->user;
         $user->balance += $event->amount;

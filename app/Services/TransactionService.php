@@ -2,7 +2,7 @@
 
 namespace App\Services;
 
-use App\Events\FundsDeposited;
+use App\Events\TransactionCreated;
 use App\Models\Transaction;
 use Carbon\Carbon;
 use Exception;
@@ -31,7 +31,7 @@ class TransactionService
                 'transaction_type' => Transaction::DEPOSIT
             ]);
 
-            event(new FundsDeposited(auth()->user(), $amount));
+            event(new TransactionCreated(auth()->user(), $amount));
 
             $this->db::commit();
 
@@ -107,7 +107,7 @@ class TransactionService
                 'fee' => $withdrawalFee
             ]);
 
-            event(new FundsDeposited($user, -$amount));
+            event(new TransactionCreated($user, -$amount));
 
             $this->db::commit();
 
